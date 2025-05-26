@@ -1,168 +1,79 @@
 # 📚 Book Management API
 
-This is a simple RESTful API for managing a collection of books using **FastAPI** and **SQLite**.
+A simple RESTful API for managing a collection of books, built using **FastAPI** and **SQLite**.
 
 ---
 
-## 🔧 Features
+## 🚀 Features
 
-- Add a new book
-- Retrieve a list of all books
-- Get details of a specific book
-- Update book details
-- Delete a book
-- Interactive API documentation with Swagger UI
-
----
-
-## 🚀 Technology Stack
-
-- Python 3.13  
-- FastAPI  
-- SQLite  
-- Uvicorn (for running the server)
+- Create a new book  
+- Get a list of all books  
+- Get details of a specific book  
+- Update a book’s details  
+- Delete a book  
+- 📸 Includes Swagger UI for testing the endpoints  
+- 🔐 (Bonus-ready) Authentication can be added later
 
 ---
 
-## 🛠️ Getting Started
+## 🛠️ Tech Stack
 
-### 1. Clone the Repository
+- **FastAPI** – clean and fast framework for building APIs
+- **SQLite** – lightweight and easy to set up
+- **Uvicorn** – ASGI server used to run the app
+
+We chose FastAPI for its simplicity, built-in documentation, and high performance.  
+SQLite was selected as the database for ease of setup and local development.
+
+---
+
+## 📷 Screenshots
+
+### ✅ Swagger UI (Main Interface)
+This is the automatically generated API docs from FastAPI.
+
+![Swagger UI](screenshots/swagger_ui_main.png)
+
+---
+
+### ✅ Create Book (POST /api/books)
+
+You can add a book by sending title, author, publishedDate, and numberOfPages.
+
+📸 Example:
+
+![Create Book](screenshots/post_create_book.png)
+
+---
+
+### ✅ Get All Books (GET /api/books)
+
+Lists all added books in the database.
+
+![All Books](screenshots/get_all_books.png)
+
+---
+
+### ✅ Update Book (PUT /api/books/{id})
+
+Update title and number of pages of an existing book.
+
+![Update Book](screenshots/put_update_book.png)
+
+---
+
+### ✅ Delete Book (DELETE /api/books/{id})
+
+Deletes the book with the specified ID.
+
+![Delete Book](screenshots/delete_book.png)
+
+---
+
+## 📦 How to Run Locally
+
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/book-api.git
-cd book-api
-```
-
-### 2. Create and Activate a Virtual Environment
-
-```bash
-python3 -m venv venv
-source venv/bin/activate   # For macOS/Linux
-venv\Scripts\activate      # For Windows
-```
-
-### 3. Install the Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the API
-
-```bash
-uvicorn main:app --reload
-```
-
-The API will be available at:  
-👉 `http://127.0.0.1:8000`  
-Swagger docs:  
-👉 `http://127.0.0.1:8000/docs`
-
----
-
-## 📸 Screenshots
-
-### 🔹 Swagger UI
-
-Shows all available endpoints.  
-📷 `screenshots/swagger-ui.png`
-
----
-
-### 🔹 Add Book (POST /api/books)
-
-Request body:  
-```json
-{
-  "title": "The Great Gatsby",
-  "author": "F. Scott Fitzgerald",
-  "publishedDate": "1925-04-10",
-  "numberOfPages": 180
-}
-```
-
-Response:  
-📷 `screenshots/post-add-book.png`
-
----
-
-### 🔹 List All Books (GET /api/books)
-
-Displays a list of all books.  
-📷 `screenshots/get-all-books.png`
-
----
-
-### 🔹 Get Book by ID (GET /api/books/{book_id})
-
-Displays the details of a specific book.  
-📷 `screenshots/get-book-by-id.png`
-
----
-
-### 🔹 Update Book (PUT /api/books/{book_id})
-
-Request body example:  
-```json
-{
-  "title": "The Great Gatsby - Updated",
-  "numberOfPages": 200
-}
-```
-
-Response:  
-📷 `screenshots/update-book.png`
-
----
-
-### 🔹 Delete Book (DELETE /api/books/{book_id})
-
-Deletes a book by ID.  
-📷 `screenshots/delete-book.png`
-
----
-
-## 📂 Project Structure
-
-```
-book-api/
-├── main.py
-├── models.py
-├── schemas.py
-├── database.py
-├── requirements.txt
-├── README.md
-└── screenshots/
-    ├── swagger-ui.png
-    ├── post-add-book.png
-    ├── get-all-books.png
-    ├── get-book-by-id.png
-    ├── update-book.png
-    └── delete-book.png
-```
-
----
-
-## ✅ API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET    | /api/books | Get all books |
-| POST   | /api/books | Add a new book |
-| GET    | /api/books/{id} | Get a specific book |
-| PUT    | /api/books/{id} | Update a book |
-| DELETE | /api/books/{id} | Delete a book |
-
----
-
-## 📌 Notes
-
-- Make sure you have Python 3.13+ installed.
-- This project is for demonstration and evaluation purposes.
-
----
-
-## 🧑‍💻 Author
-
-Created by Renad Al-Shahri  
-🚀 Capstone Project — May 2025  
+git clone https://github.com/RenadAnwarDev/BOOK-API.git
+cd BOOK-API
