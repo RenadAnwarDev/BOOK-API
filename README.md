@@ -88,13 +88,13 @@ http://127.0.0.1:8000/docs
 
 From there, you can test all available endpoints interactively.
 
-## 7. Additional Notes
+## 6. Additional Notes
 
 - The database file `books.db` is created automatically on the first run.
 - Make sure you have Python 3.7 or higher installed.
 - The API is designed for learning and simple usage, not production-ready without additional security.
 
-## 8. Contact and Repository
+## 7. Contact and Repository
 
 The source code is available at:
 
